@@ -1,0 +1,8 @@
+# Run Prettier to format your code
+npx prettier --write .
+
+# Run ESLint to check for linting errors
+npx eslint .
+
+# Run tests
+# npm test
