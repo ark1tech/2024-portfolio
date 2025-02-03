@@ -1,9 +1,50 @@
 {
-  "extends": ["next/typescript", "next/core-web-vitals"],
-  "globals": {
-    "React": "readonly"
+  "plugins": [
+    "tailwindcss",
+    "unused-imports"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaVersion": 2021,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true
+    }
   },
+  "root": true,
+  "extends": [
+    "next/core-web-vitals",
+    "next/typescript",
+    "prettier"
+    // "plugin:tailwindcss/recommended",
+    // "plugin:drizzle/recommended"
+  ],
   "rules": {
-    "no-unused-vars": "warn"
-  }
+    "semi": "error",
+    "tailwindcss/no-custom-classname": "off",
+    "unused-imports/no-unused-imports": "warn",
+    "unused-imports/no-unused-vars": "warn",
+    "@typescript-eslint/no-unused-vars": "off"
+    // "drizzle/enforce-delete-with-where": "error",
+    // "drizzle/enforce-update-with-where": "error"
+  },
+  "settings": {
+    "tailwindcss": {
+      "callees": [
+        "cn"
+      ],
+      "config": "./tailwind.config.ts"
+    },
+    "next": {
+      "rootDir": [
+        "./src/"
+      ]
+    }
+  },
+  "ignorePatterns": [
+    "node_modules/",
+    ".next/",
+    "assets/",
+    "public/"
+  ]
 }
