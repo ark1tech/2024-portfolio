@@ -1,8 +1,5 @@
 {
-  "plugins": [
-    "tailwindcss",
-    "unused-imports"
-  ],
+  "plugins": ["tailwindcss", "unused-imports"],
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
     "ecmaVersion": 2021,
@@ -30,21 +27,12 @@
   },
   "settings": {
     "tailwindcss": {
-      "callees": [
-        "cn"
-      ],
+      "callees": ["cn"],
       "config": "./tailwind.config.ts"
     },
     "next": {
-      "rootDir": [
-        "./src/"
-      ]
+      "rootDir": ["./src/"]
     }
   },
-  "ignorePatterns": [
-    "node_modules/",
-    ".next/",
-    "assets/",
-    "public/"
-  ]
+  "ignorePatterns": ["node_modules/", ".next/", "assets/", "public/"]
 }
